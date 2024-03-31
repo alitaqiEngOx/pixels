@@ -5,7 +5,7 @@ document.querySelector("#in-vert-pix").value = '1';
 document.querySelector("#in-hori-pix").value = '1';
 document.querySelector("#colour").value = "#000000";
 
-/* making a grid */
+/* grid function */
 function makeGrid() {
     // set rows & columns
     const rows = document.querySelector("#in-vert-pix").valueAsNumber;
@@ -26,10 +26,17 @@ function makeGrid() {
     };
 
     // colour grid via event listener (i.e., mouse clicks)
-    table.addEventListener("click", function (event) {
+    table.addEventListener("click", function(event) {
         if (event.target.nodeName === "TD") {
             event.target.style.backgroundColor =
             document.querySelector("#colour").value
         };
-    })
+    });
 }
+
+/* make a grid on form submission */
+const submit = document.querySelector("#button");
+button.addEventListener("click", function(event) {
+    event.preventDefault();
+    makeGrid()
+});
