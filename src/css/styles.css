@@ -14,5 +14,24 @@ h2 {
 }
 
 h2:first-of-type {
+    border-collapse: collapse;
     margin-top: 0.5em;
+}
+
+table {
+    margin: 0 auto;
+}
+
+tr {
+    height: 20px;
+}
+
+td {
+    width: 20px;
+    border: 1px solid black;
+}
+
+#in-vert-pix,
+#in-hori-pix {
+    width: 6em;
 }
