@@ -24,4 +24,12 @@ function makeGrid() {
             newVertElem.appendChild(newHoriElem)
         };
     };
+
+    // colour grid via event listener (i.e., mouse clicks)
+    table.addEventListener("click", function (event) {
+        if (event.target.nodeName === "TD") {
+            event.target.style.backgroundColor =
+            document.querySelector("#colour").value
+        };
+    })
 }
